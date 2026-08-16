@@ -2,11 +2,12 @@ import "dotenv/config"
 import express from "express"
 import sequelize from "./sequelize.js"
 
+
 const PORT = process.env.PORT
 const app = express()
 
 
-app.get("/", (req, res) => {res.send('The server is up')})
+app.get("/", (req, res) => {res.send()})
 
 
 const start = async () => {
