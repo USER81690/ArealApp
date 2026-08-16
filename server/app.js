@@ -1,10 +1,16 @@
 import "dotenv/config"
 import express from "express"
 import sequelize from "./sequelize.js"
+import articleRoutes from "./routes/articleRoutes.js"
+import "./models/associations.js"
 
 
 const PORT = process.env.PORT
 const app = express()
+
+
+app.use(express.json())
+app.use(articleRoutes)
 
 
 app.get("/", (req, res) => {res.send()})
