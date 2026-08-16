@@ -2,6 +2,7 @@ import "dotenv/config"
 import express from "express"
 import sequelize from "./sequelize.js"
 import articleRoutes from "./routes/articleRoutes.js"
+import commentRoutes from "./routes/commentRoutes.js"
 import "./models/associations.js"
 
 
@@ -11,6 +12,7 @@ const app = express()
 
 app.use(express.json())
 app.use(articleRoutes)
+app.use(commentRoutes)
 
 
 app.get("/", (req, res) => {res.send()})
